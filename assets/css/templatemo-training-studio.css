@@ -798,3 +798,11 @@ textarea {
 footer h2{
   font-size: 32px;
 }
+
+.down-content input{
+  padding: 4px;
+  background-color: #f9735b;
+  color: #2c343d;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
