@@ -760,3 +760,41 @@ textarea {
   background-color: #FFF;
   color: #369FFF;
 }
+
+
+
+
+
+/*footer*/
+
+#footer{
+  background: #f7f7f7;
+  padding: 3rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.useful-link{
+  margin: 0px auto;
+}
+.useful-link h2{
+  padding-bottom: 15px;
+  font-weight: 200;
+}
+.use-links{
+  line-height: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.use-links li a{
+  color: #303030;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 500;
+}
+.use-links li a:hover{
+  color: #000;
+}
+footer h2{
+  font-size: 32px;
+}

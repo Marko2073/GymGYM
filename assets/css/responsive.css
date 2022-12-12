@@ -42,5 +42,9 @@
     }
     #form{
         width:80%;
-      }
+    }
+    .use-links{
+        display: flex;
+        flex-direction: column;
+    }
 }
