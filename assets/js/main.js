@@ -12,6 +12,13 @@ window.addEventListener("scroll",()=>{
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 })
+window.onclick = function(event) {
+	if (event.target != hamburger) {
+		hamburger.classList.remove("active");
+		navMenu.classList.remove("active");
+	
+	}
+  }
 
 let links=['Home','Trainers','Schedule','Contact','About'];
 let paths=['/GymGYM/index.html','/GymGYM/index.html#trainers','/GymGYM/index.html#schedule','/GymGYM/index.html#contact-us','/GymGYM/about.html'];
