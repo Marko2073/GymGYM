@@ -14,7 +14,7 @@ window.addEventListener("scroll",()=>{
 })
 
 let links=['Home','Trainers','Schedule','Contact','About'];
-let paths=['/index.html','/index.html#trainers','/index.html#schedule','/index.html#contact-us','/about.html'];
+let paths=['/GymGYM/index.html','/GymGYM/index.html#trainers','/GymGYM/index.html#schedule','/GymGYM/index.html#contact-us','/GymGYM/about.html'];
 navMenu.innerHTML="";
 
 for(let i=0; i<links.length;i++)
