@@ -253,5 +253,50 @@ var programS = document.getElementById('program');
 	});
 
 
+	
+	$(document).ready(function(){
+		if($('.disclaimer1').is(':visible')) {
+			$('.disclaimer1').hide();
+		  } 
+		$('.toggleButton1').click(function(){
+		if($('.disclaimer1').is(':visible')) {
+		  $('.disclaimer1').hide(this);
+		} else {
+		  $('.disclaimer1').show(this);
+		}
+	  });
+	});
+	$(document).ready(function(){
+		if($('.disclaimer2').is(':visible')) {
+			$('.disclaimer2').hide();
+		  } 
+		$('.toggleButton2').click(function(){
+		if($('.disclaimer2').is(':visible')) {
+		  $('.disclaimer2').hide(this);
+		} else {
+		  $('.disclaimer2').show(this);
+		}
+	  });
+	});
+	$(document).ready(function(){
+		if($('.disclaimer3').is(':visible')) {
+			$('.disclaimer3').hide();
+		  } 
+		$('.toggleButton3').click(function(){
+		if($('.disclaimer3').is(':visible')) {
+		  $('.disclaimer3').hide(this);
+		} else {
+		  $('.disclaimer3').show(this);
+		}
+	  });
+	});
+	// $('.disclaimer').hide();
+	// $(document).ready(function(){
+	// 	$('#toggleButton').click(function(){
+			
+	// 		$('.disclaimer').show();
+	// 	});
+	// });
 
 
+	
