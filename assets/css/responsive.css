@@ -40,5 +40,7 @@
     #baner .wrap #tekst h2{
         font-size: 25px;
     }
-    
+    #form{
+        width:80%;
+      }
 }

@@ -87,7 +87,7 @@ for(let i=0;i<icons.length;i++)
 
 }
 
-var select = document.getElementById('trainer');
+var trainerS = document.getElementById('trainer');
 	var trainers = ['Choose...', 'Bret D. Bowers', 'Hector T. Daigl', 'Paul D. Newman'];
 	var subjectValues = ['choose', '1', '2', '3'];
 
@@ -95,28 +95,38 @@ var select = document.getElementById('trainer');
 		let option = document.createElement('option');
 		option.append(trainers[i]);
 		option.setAttribute('value', subjectValues[i]);
-		select.appendChild(option);
+		trainerS.appendChild(option);
+	}
+var programS = document.getElementById('program');
+	var programs = ['Choose...', 'Basic Fitness', 'Bodybuilding', 'Cardio Training', 'Full Body Workout', 'Functional Training', 'Bodypump'];
+	var programsValues = ['choose', '1', '2', '3', '4', '5', '6'];
+
+	for (let i = 0; i < programs.length; i++) {
+		let option = document.createElement('option');
+		option.append(programs[i]);
+		option.setAttribute('value', programsValues[i]);
+		programS.appendChild(option);
 	}
 
 
-const fullName = document.getElementById('name');
+	const fullName = document.getElementById('name');
 	const email = document.getElementById('email');
-	const address = document.getElementById('address');
-	const subject = document.getElementById('trainer');
+	const trainer = document.getElementById('trainer');
+	const program = document.getElementById('program');
 	const message = document.getElementById('message');
 	const checkBox = document.getElementById('agree');
 	const submit = document.getElementById('submit');
 	var errorMessages = document.querySelectorAll('#form span');
 
-	var nameApprove = false;
-	var emailApprove = false;
-	var selectApprove = false;
-	var messageApprove = false;
-	var checkBoxApprove = false;
+	var nameChc = false;
+	var emailChc = false;
+	var selectChc = false;
+	var programChc = false;
+	var messageChc = false;
+	var checkBoxChc= false;
 
 	var nameRegex = /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,14}\s([A-ZČĆŽĐŠ][a-zćčžđš]{1,14})?\s?[A-ZČĆŽŠĐ][a-zćčžđš]{1,19}$/;
 	var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
 	//Check name
 
 	function checkName() {
@@ -124,13 +134,13 @@ const fullName = document.getElementById('name');
 			fullName.classList.remove('fail')
 			fullName.classList.add('success');
 			errorMessages[1].textContent = "";
-			nameApprove = true;
+			nameChc = true;
 		} else if (fullName.value.length < 1) {
 			errorMessages[1].textContent = "Field can't be empty.";
-			nameApprove = false;
+			nameChc = false;
 		} else {
 			errorMessages[1].textContent = "Change the format of the name. Example: Marko Markovic";
-			nameApprove = false;
+			nameChc = false;
 		}
 	}
 
@@ -147,13 +157,13 @@ const fullName = document.getElementById('name');
 			email.classList.remove('fail')
 			email.classList.add('success');
 			errorMessages[3].textContent = "";
-			emailApprove = true;
+			emailChc = true;
 		} else if (email.value.length < 1) {
 			errorMessages[3].textContent = "Field can't be empty.";
-			emailApprove = false;
+			emailChc = false;
 		} else {
 			errorMessages[3].textContent = "Change the format of the email. Example: someone@gmail.com";
-			emailApprove = false;
+			emailChc = false;
 		}
 	}
 
@@ -170,29 +180,46 @@ const fullName = document.getElementById('name');
 		if (selectedValue == "choose") {
 			trainer.classList.add('fail');
 			errorMessages[5].textContent = "Please choose the trainer";
-			selectApprove = false;
+			selectChc = false;
 		} else {
 			trainer.classList.remove('fail');
 			trainer.classList.add('success');
 			errorMessages[5].textContent = "";
-			selectApprove = true;
+			selectChc = true;
 		}
 	}
 
 	trainer.addEventListener('blur', checkTrainer);
 
+	function checkProgram() {
+		let selectedValue = program.options[program.selectedIndex].value;
+		if (selectedValue == "choose") {
+			program.classList.add('fail');
+			errorMessages[7].textContent = "Please choose the program";
+			programChc = false;
+		} else {
+			program.classList.remove('fail');
+			program.classList.add('success');
+			errorMessages[7].textContent = "";
+			programChc = true;
+		}
+	}
+
+	program.addEventListener('blur', checkProgram);
+
 	//Message check
+
 
 	function checkMessage() {
 		if (message.value < 1) {
-			errorMessages[7].textContent = "Field can't be empty.";
+			errorMessages[9].textContent = "Field can't be empty.";
 			message.classList.add('fail');
-			messageApprove = false;
+			messageChc = false;
 		} else {
-			errorMessages[7].textContent = "";
+			errorMessages[9].textContent = "";
 			message.classList.remove('fail');
 			message.classList.add('success');
-			messageApprove = true;
+			messageChc = true;
 		}
 	}
 
@@ -202,10 +229,10 @@ const fullName = document.getElementById('name');
 
 	function checkCheckbox() {
 		if (checkBox.checked) {
-			checkBoxApprove = true;
-			errorMessages[9].textContent = "";
+			checkBoxChc = true;
+			errorMessages[11].textContent = "";
 		} else {
-			errorMessages[9].textContent = "You have to agree in order to send.";
+			errorMessages[11].textContent = "You have to agree in order to send.";
 		}
 	}
 
@@ -216,9 +243,10 @@ const fullName = document.getElementById('name');
 		checkName();
 		checkEmail();
 		checkTrainer();
+		checkProgram();
 		checkMessage();
 		checkCheckbox();
-		if (nameApprove && emailApprove && selectApprove && messageApprove && checkBoxApprove) {
+		if (nameChc && emailChc && selectChc && programChc && messageChc && checkBoxChc) {
 			alert("Successfully sent!");
 			setTimeout("location.reload(true);", 0);
 		}
