@@ -271,6 +271,18 @@ banner
   display: flex;
   justify-content: center;
   }
+  .rslides li {
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+    }
+  
+  .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+    }
 
 .main-banner {
   position: relative;
