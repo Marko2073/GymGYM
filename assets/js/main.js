@@ -312,6 +312,7 @@ var indeksImg = 0;
 var images = ['cta-bg.jpg','cta-bg1.jpg'];
 function changeImg(){
     document.querySelector('#call-to-action').style.backgroundImage = `url(assets/images/${images[indeksImg]})`;
+	
     indeksImg++;
     if(indeksImg >= images.length){
         indeksImg = 0;
