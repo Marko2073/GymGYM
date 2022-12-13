@@ -308,16 +308,16 @@ var programS = document.getElementById('program');
 	
 
 
-var indeksImg = 0;
-var images = ['cta-bg.jpg','cta-bg1.jpg'];
+var indeksSlide = 0;
+var bacgroundSlides = ['cta-bg.jpg','cta-bg1.jpg'];
 function changeImg(){
-    document.querySelector('#call-to-action').style.backgroundImage = `url(assets/images/${images[indeksImg]})`;
+    document.querySelector('#call-to-action').style.backgroundImage = `url(assets/images/${bacgroundSlides[indeksSlide]})`;
 	
-    indeksImg++;
-    if(indeksImg >= images.length){
-        indeksImg = 0;
+    indeksSlide++;
+    if(indeksSlide >= bacgroundSlides.length){
+        indeksSlide = 0;
     }
-    setTimeout("changeImg()", 5000);
+    setTimeout("changeImg()", 4000);
 };
 window.onload = changeImg;
 
