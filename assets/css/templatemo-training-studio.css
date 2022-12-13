@@ -272,6 +272,8 @@ banner
   justify-content: center;
   }
   .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
     display: none;
     width: 100%;
     left: 0;
