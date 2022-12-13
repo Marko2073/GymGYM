@@ -711,7 +711,11 @@ responsive
 }
 #about_me .Text-col{
   text-align: center;
- }
+}
+#about_me .Text-col h3,
+#about_me .Text-col h4{
+  margin-bottom: 10px;
+}
 .container-fluid{
   padding: 0;
 }
