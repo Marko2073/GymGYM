@@ -305,7 +305,7 @@ var programS = document.getElementById('program');
 		}
 	  });
 	});
-
+	
 
 
 var indeksImg = 0;
