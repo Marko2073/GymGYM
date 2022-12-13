@@ -238,27 +238,27 @@ var programS = document.getElementById('program');
 
 	//Submit check
 
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
-		checkName();
-		checkEmail();
-		checkTrainer();
-		checkProgram();
-		checkMessage();
-		checkCheckbox();
-		if (nameChc && emailChc && selectChc && programChc && messageChc && checkBoxChc) {
-			var okModal = document.getElementById("okModal");
-			var modal = document.getElementById("myModal");	
+	addEventListener('submit', (e) => {
+			e.preventDefault();
+			checkName();
+			checkEmail();
+			checkTrainer();
+			checkProgram();
+			checkMessage();
+			checkCheckbox();
+			if (nameChc && emailChc && selectChc && programChc && messageChc && checkBoxChc) {
+				var okModal = document.getElementById("okModal");
+				var modal = document.getElementById("myModal");
 
-			modal.style.display = "block";
-			
-			okModal.onclick = function() {
-			modal.style.display = "none";
-			setTimeout("location.reload(true);", 0);
+				modal.style.display = "block";
+
+				okModal.onclick = function () {
+					modal.style.display = "none";
+					setTimeout("location.reload(true);", 0);
+				};
+
 			}
-			
-		}
-	});
+		});
 
 
 	
@@ -319,6 +319,6 @@ function changeImg(){
     }
     setTimeout("changeImg()", 4000);
 };
-window.onload = changeImg;
+window.addEventListener('load',changeImg);
 
 	

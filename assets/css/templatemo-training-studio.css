@@ -204,6 +204,9 @@ header
 header
 {
     background-color: #2c343d;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 .navbar ul li{
     list-style: none;
