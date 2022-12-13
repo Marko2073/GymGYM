@@ -247,8 +247,16 @@ var programS = document.getElementById('program');
 		checkMessage();
 		checkCheckbox();
 		if (nameChc && emailChc && selectChc && programChc && messageChc && checkBoxChc) {
-			alert("Successfully sent!");
+			var okModal = document.getElementById("okModal");
+			var modal = document.getElementById("myModal");	
+
+			modal.style.display = "block";
+			
+			okModal.onclick = function() {
+			modal.style.display = "none";
 			setTimeout("location.reload(true);", 0);
+			}
+			
 		}
 	});
 
@@ -290,13 +298,6 @@ var programS = document.getElementById('program');
 		}
 	  });
 	});
-	// $('.disclaimer').hide();
-	// $(document).ready(function(){
-	// 	$('#toggleButton').click(function(){
-			
-	// 		$('.disclaimer').show();
-	// 	});
-	// });
 
 
 	
