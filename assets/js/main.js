@@ -258,59 +258,29 @@ var programS = document.getElementById('program');
 
 			}
 		});
-
-
-	
-	$(document).ready(function(){
-		if($('.disclaimer1').is(':visible')) {
-			$('.disclaimer1').hide();
-		  } 
-		$('.toggleButton1').click(function(){
 		
-		if($('.disclaimer1').is(':visible')) {
-			$(".toggleButton1").prop('value', 'About');
-		  $('.disclaimer1').hide(this);
-		} else {
-			$(".toggleButton1").prop('value', 'Close');
-		  $('.disclaimer1').show(this);
-		}
-	  });
-	});
-	$(document).ready(function(){
-		if($('.disclaimer2').is(':visible')) {
-			$('.disclaimer2').hide();
-		  } 
-		$('.toggleButton2').click(function(){
-		if($('.disclaimer2').is(':visible')) {
-			$(".toggleButton2").prop('value', 'About');
-		  $('.disclaimer2').hide(this);
-		} else {
-			$(".toggleButton2").prop('value', 'Close');
-		  $('.disclaimer2').show(this);
-		}
-	  });
-	});
-	$(document).ready(function(){
-		if($('.disclaimer3').is(':visible')) {
-			$('.disclaimer3').hide();
-		  } 
-		$('.toggleButton3').click(function(){
-		if($('.disclaimer3').is(':visible')) {
-			$(".toggleButton3").prop('value', 'About');
-		  $('.disclaimer3').hide(this);
-		} else {
-			$(".toggleButton3").prop('value', 'Close');
-		  $('.disclaimer3').show(this);
-		}
-	  });
-	});
-	
+	$('.disclaimer').hide();
+	let $nizAbout=$(".down-content input");
+	function moreAbout($niz){
+		$niz.each((i,element)=>
+			$(element).click(function(){
+				$(this).prev().slideToggle(600);
+				if($(this).val()=='About')
+				{
+					$(this).prop('value', 'Close');
+				}
+					
+				else $(this).prop('value', 'About');
+			})
+		);
+	}
+	moreAbout($nizAbout);
 
 
 var indeksSlide = 0;
 var bacgroundSlides = ['cta-bg.jpg','cta-bg1.jpg'];
 function changeImg(){
-    document.querySelector('#call-to-action').style.backgroundImage = `url(assets/images/${bacgroundSlides[indeksSlide]})`;
+document.querySelector('#call-to-action').style.backgroundImage = `url(assets/images/${bacgroundSlides[indeksSlide]})`;
 	
     indeksSlide++;
     if(indeksSlide >= bacgroundSlides.length){
