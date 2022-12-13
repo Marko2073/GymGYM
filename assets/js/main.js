@@ -321,4 +321,7 @@ function changeImg(){
 };
 window.addEventListener('load',changeImg);
 
+$(function() {
+    $(".rslides").responsiveSlides();
+  });
 	
