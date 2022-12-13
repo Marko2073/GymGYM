@@ -267,9 +267,12 @@ var programS = document.getElementById('program');
 			$('.disclaimer1').hide();
 		  } 
 		$('.toggleButton1').click(function(){
+		
 		if($('.disclaimer1').is(':visible')) {
+			$(".toggleButton1").prop('value', 'About');
 		  $('.disclaimer1').hide(this);
 		} else {
+			$(".toggleButton1").prop('value', 'Close');
 		  $('.disclaimer1').show(this);
 		}
 	  });
@@ -280,8 +283,10 @@ var programS = document.getElementById('program');
 		  } 
 		$('.toggleButton2').click(function(){
 		if($('.disclaimer2').is(':visible')) {
+			$(".toggleButton2").prop('value', 'About');
 		  $('.disclaimer2').hide(this);
 		} else {
+			$(".toggleButton2").prop('value', 'Close');
 		  $('.disclaimer2').show(this);
 		}
 	  });
@@ -292,8 +297,10 @@ var programS = document.getElementById('program');
 		  } 
 		$('.toggleButton3').click(function(){
 		if($('.disclaimer3').is(':visible')) {
+			$(".toggleButton3").prop('value', 'About');
 		  $('.disclaimer3').hide(this);
 		} else {
+			$(".toggleButton3").prop('value', 'Close');
 		  $('.disclaimer3').show(this);
 		}
 	  });
