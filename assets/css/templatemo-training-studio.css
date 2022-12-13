@@ -705,6 +705,9 @@ responsive
   margin: 0px auto;
   align-items: center;
 }
+.about .row{
+  margin:0;
+}
 #about_me .Center-col{
  display: flex;
  justify-content: center;
