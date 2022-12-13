@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 	<channel>
-			<title>CarWasher | Početna</title>
+			<title>GymGYM | Home</title>
 			<link>https://marko2073.github.io/GymGYM/index.html</link>
 			<description>News</description>
         <item>
-            <title>carWasher | Cenovnik</title>
+            <title>GymGYM | About</title>
             <link>https://marko2073.github.io/GymGYM/about.html</link>
             <description>News about author</description>
         </item>
