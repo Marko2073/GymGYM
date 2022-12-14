@@ -29,6 +29,10 @@ for(let i=0; i<links.length;i++)
     navMenu.innerHTML+=`<li class="nav-item">
     <a href="${paths[i]}" class="nav-link">${links[i]}</a></li>`
 }
+
+if(window.location.pathname=='/GymGYM/' || window.location.pathname=='/GymGYM/index.html')
+
+{
 let schedueTable=document.querySelector("#schedule_table");
 
 let Training=["Strength Training","Muscle Training","Power Training"];
@@ -293,3 +297,4 @@ window.addEventListener('load',changeImg);
 $(function() {
     $(".rslides").responsiveSlides();
   });
+}
